@@ -5,19 +5,17 @@ const router = express.Router()
 const ApiService = new ApiServices()
 
 router.post('/', async (req, res, next) => {
-  /* const { body } = req */
-  console.log(req.body)
+  const { body } = req
 
   try {
-    const data = await ApiService.getData()
+    const data = await ApiService.getData(body)
 
     res.status(201).json({
-      data: data
+      data
     })
   } catch (err) {
     next(err)
   }
-
 })
 
 module.exports = router

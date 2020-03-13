@@ -1,8 +1,8 @@
 class ApiServices {
   constructor () {}
 
-  getData () {
-    return Promise.resolve('ok')
+  getData (term) {
+    return Promise.resolve(term)
   }
 }
 
