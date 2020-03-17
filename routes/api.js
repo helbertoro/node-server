@@ -8,7 +8,7 @@ router.post('/', async (req, res, next) => {
   const { body } = req
 
   try {
-    const data = await ApiService.getData(body)
+    const data = await ApiService.getData(body.term)
 
     res.status(201).json({
       data

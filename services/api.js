@@ -8,7 +8,6 @@ class ApiServices {
   async getData (term) {
     try {
       const data = await this.twitter.getTweets(term)
-      console.log(data)
       return Promise.resolve(data)
     } catch (error) {
       console.log(`Error: ${error}`)
